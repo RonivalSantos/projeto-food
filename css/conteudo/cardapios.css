@@ -1,0 +1,74 @@
+.cardapios {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+  padding: 28px 8%;
+}
+.cardapios-conteudo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.cardapio-conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--cor-neutra-0);
+  width: 25%;
+  gap: 18px;
+  padding: 20px;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cardapio-conteudo .coracao {
+  position: absolute;
+  color: var(--cor-neutra-0);
+  background-color: var(--cor-6);
+  font-size: 1.5rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 0 20px 0px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 0;
+}
+.cardapio-conteudo > p {
+  color: #434343;
+}
+
+.cardapio-conteudo .estrelas i {
+  color: var(--cor-6);
+}
+.cardapio-conteudo .cardapio-preco {
+  display: flex;
+  gap: 20px;
+  font-weight: 700;
+  align-items: center;
+}
+.cardapio-conteudo .cardapio-preco i {
+  color: #000;
+}
+@media screen and (max-width: 1170px) {
+  .cardapios-conteudo {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .cardapio-conteudo {
+    width: calc(50% - 12px);
+  }
+}
+@media screen and (max-width: 600px) {
+  .cardapio-conteudo {
+    width: 100%;
+  }
+}
