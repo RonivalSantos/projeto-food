@@ -46,3 +46,19 @@ function animaScroll() {
 }
 animaScroll();
 window.addEventListener("scroll", animaScroll);
+
+// click no botao menu
+
+// Seleciona todos os itens da navbar (li.nav-item)
+const navItems = document.querySelectorAll("#nav-list .nav-item, #mobile-nav-list .nav-item");
+
+// Adiciona evento de clique a cada item
+navItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    // Remove a classe 'active' de todos os itens
+    navItems.forEach((navItem) => navItem.classList.remove("active"));
+
+    // Adiciona a classe 'active' ao item clicado
+    item.classList.add("active");
+  });
+});
